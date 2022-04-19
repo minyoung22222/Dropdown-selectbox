@@ -21,6 +21,7 @@ body, ul{
     border: 1px solid #C4C4C4;
     border-radius: 10px;
     box-sizing: border-box;
+    background-color: #fff;
 }
 
 .dropdown_selectbox:active {
