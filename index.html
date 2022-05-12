@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Dropdown-selectbox</title>
 </head>
 <body>
     <article class="container">
-        <button class="dropdown_selectbox">
-            <span class="span">최애 프로그래밍 언어</span>
+        <button class="dropdown_selectbox_btn">
+            <h1 class="selectbox_title">최애 프로그래밍 언어</h1>
             <img class="polygon" src="img/Polygon 1.png" alt="Polygon">
         </button>
         <section class="option_box">
@@ -23,6 +26,17 @@
             </ul>
         </section>
     </article>
-    
+    <script>
+        const btnSelect = document.querySelector('.dropdown_selectbox_btn');
+        const sectionOption = document.querySelector('section');
+        const option = document.querySelector('option');
+        const selectOption = document.querySelector('select_option');
+
+        btnSelect.addEventListener('click', () => {
+            sectionOption.classList.toggle('show');
+        });
+
+    </script>
 </body>
 </html>
+

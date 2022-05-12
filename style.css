@@ -1,6 +1,17 @@
-body, ul{
+body, ul, h1{
     margin: 0;
     padding: 0;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: #fff;
 }
 
 .container {
@@ -11,7 +22,7 @@ body, ul{
     
 }
 
-.dropdown_selectbox {
+.dropdown_selectbox_btn {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,16 +32,18 @@ body, ul{
     border: 1px solid #C4C4C4;
     border-radius: 10px;
     box-sizing: border-box;
+    cursor: pointer;
     background-color: #fff;
 }
 
-.dropdown_selectbox:active {
+.dropdown_selectbox_btn:active {
     border: 1px solid #9B51E0;
     outline: 3px solid #F8E4FF;
 }
 
-.span {
+.selectbox_title {
     font-size: 12px;
+    font-weight: 400;
 }
 
 .polygon {
@@ -42,20 +55,28 @@ body, ul{
     padding: 4px 0px;
     border: 1px solid #C4C4C4;
     border-radius: 10px;
-    box-shadow: 4px 4px 14px 0px #00000026;
+    box-shadow: 4px 4px 14px 0px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
 }
 
-.option {
+.option_box .option {
     list-style: none;
 }
 
-.select_option {
+.option_box .select_option {
     padding: 12px 18px;
     font-size: 14px;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
-.select_option:hover {
+.option_box .select_option:hover {
+    margin: 5px 8px;
+    padding: 7px 10px;
     border-radius: 8px;
     background-color: #F8E4FF;
+}
+
+.show {
+    display: none;
 }
