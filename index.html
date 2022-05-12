@@ -28,12 +28,22 @@
     </article>
     <script>
         const btnSelect = document.querySelector('.dropdown_selectbox_btn');
+        const selectTitle = document.querySelector('.selectbox_title');
         const sectionOption = document.querySelector('section');
-        const option = document.querySelector('option');
-        const selectOption = document.querySelector('select_option');
+        const option = document.querySelector('.option');
+        const selectOption = document.querySelectorAll('.select_option');
+        const li = document.querySelector('li');
 
         btnSelect.addEventListener('click', () => {
             sectionOption.classList.toggle('show');
+        });
+
+        selectOption.forEach(element => {
+            element.addEventListener('click', () => {
+                selectTitle.textContent = element.textContent;
+                console.log(element);
+            })
+            
         });
 
     </script>
