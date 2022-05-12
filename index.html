@@ -16,7 +16,7 @@
             <h1 class="selectbox_title">최애 프로그래밍 언어</h1>
             <img class="polygon" src="img/Polygon 1.png" alt="Polygon">
         </button>
-        <section class="option_box">
+        <section class="option_box hide">
             <ul class="option">
                 <li class="select_option">Python</li>
                 <li class="select_option">Java</li>
@@ -30,20 +30,20 @@
         const btnSelect = document.querySelector('.dropdown_selectbox_btn');
         const selectTitle = document.querySelector('.selectbox_title');
         const sectionOption = document.querySelector('section');
-        const option = document.querySelector('.option');
         const selectOption = document.querySelectorAll('.select_option');
-        const li = document.querySelector('li');
+        const polygon = document.querySelector('.polygon');
 
         btnSelect.addEventListener('click', () => {
-            sectionOption.classList.toggle('show');
+            sectionOption.classList.toggle('hide');
+            polygon.classList.toggle('reverse');
         });
 
         selectOption.forEach(element => {
             element.addEventListener('click', () => {
                 selectTitle.textContent = element.textContent;
-                console.log(element);
-            })
-            
+                sectionOption.classList.toggle('hide');
+                polygon.classList.toggle('reverse');
+            });
         });
 
     </script>
